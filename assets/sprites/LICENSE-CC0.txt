@@ -1,0 +1,18 @@
+CUBICLE - Office Simulator :: Original Asset Pack
+=================================================
+
+The artwork in this directory (chars.png, objects.png, tiles.png, icons.png,
+atlas.js) was generated entirely from source code by
+`tools/generate_sprites.py`, written for this project.
+
+To the extent possible under law, the author has waived all copyright and
+related or neighbouring rights to this work.
+
+CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+https://creativecommons.org/publicdomain/zero/1.0/
+
+You may copy, modify, distribute and perform the work, even for commercial
+purposes, all without asking permission.
+
+No third-party artwork was downloaded, traced, sampled, or derived from any
+existing product.

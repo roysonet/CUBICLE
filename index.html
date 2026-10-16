@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#efe9dd">
+<meta name="description" content="CUBICLE - an isometric office management game. Keep the coffee hot, the printer alive and the tickets short. Pure HTML, CSS and JavaScript.">
+<title>CUBICLE &mdash; Office Simulator</title>
+
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/ui.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23d97757'/%3E%3Cpath d='M8 22V10h4v4h8v-4h4v12h-4v-4h-8v4z' fill='%23faf9f5'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<div id="app" data-scene="boot">
+
+  <!-- The isometric world renders here. -->
+  <canvas id="stage" aria-label="Office floor"></canvas>
+
+  <!-- Boot / failure notice. Removed by the game once it starts. -->
+  <div id="boot" role="status">
+    <div class="boot-card">
+      <div class="boot-mark">CUBICLE</div>
+      <p id="boot-status">Starting&hellip;</p>
+      <noscript>
+        <p class="boot-error">This game needs JavaScript enabled.</p>
+      </noscript>
+    </div>
+  </div>
+
+  <!-- Mobile landscape hint -->
+  <div id="rotate-hint">
+    <div class="rotate-card">
+      <div class="rotate-icon" aria-hidden="true"></div>
+      <strong>Rotate your device</strong>
+      <span>CUBICLE is played in landscape.</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- =====================================================================
+     Engine
+     ===================================================================== -->
+<script src="js/engine/util.js"></script>
+<script src="js/engine/loop.js"></script>
+<script src="js/engine/save.js"></script>
+<script src="js/engine/audio.js"></script>
+<script src="js/engine/input.js"></script>
+<script src="js/engine/view.js"></script>
+
+<!-- Generated sprite atlas metadata (JS, not JSON, so file:// works) -->
+<script src="assets/sprites/atlas.js"></script>
+
+<!-- =====================================================================
+     Game
+     ===================================================================== -->
+<script src="js/game/config.js"></script>
+<script src="js/game/assets.js"></script>
+<script src="js/game/grid.js"></script>
+<script src="js/game/entities.js"></script>
+<script src="js/game/sim.js"></script>
+
+<!-- =====================================================================
+     UI + entry point (game.js must load last)
+     ===================================================================== -->
+<script src="js/ui/ui.js"></script>
+<script src="js/game/game.js"></script>
+
+</body>
+</html>
